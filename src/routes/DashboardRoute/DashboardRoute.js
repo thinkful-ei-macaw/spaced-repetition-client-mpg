@@ -43,7 +43,7 @@ class DashboardRoute extends Component {
       <div>
         <section>
           <h2>{this.state.language.name}</h2>
-          <button>Start Practicing</button>
+          <button onClick={(e) => { e.preventDefault(); this.props.history.push('/learn') }}>Start Practicing</button>
           <ul>
             {this.state.words.map(word => {
               return <li key={word.id}>
