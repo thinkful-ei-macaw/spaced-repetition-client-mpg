@@ -1,40 +1,56 @@
-import React, { Component } from 'react'
-import config from '../../config';
+import React, { Component } from 'react';
+import LanguageApi from '../../services/language-api-service'
 import TokenService from '../../services/token-service';
+import LanguageContext from '../../contexts/LanguageContext';
+import Button from '../../components/Button/Button';
+
 
 class DashboardRoute extends Component {
-  state = {
-    language: {},
-    words: []
-  }
+
+  static contextType = LanguageContext
 
   componentDidMount() {
-    return fetch(`${config.API_ENDPOINT}/language`, {
-      headers: {
-        authorization: `bearer ${TokenService.getAuthToken()}`
-      }
-    })
-    .then((res) => (!res.ok ? res.json()
-    .then((e) => Promise.reject(e)) : res.json()))
-    .then(obj => this.setState({language: obj.language, words: obj.words}));  
-  }
-  
+    LanguageApi.getLanguage()
+      .then(response => {
+        this.context.setLanguage(response.language)
+        this.context.setWords(response.words)
+      })
+      .catch(err => {
+        if (err.error === 'Unauthorized') {
+          TokenService.clearAuthToken()
+          this.props.history.push('/login')
+        }
+        this.context.setError(err)
+      })
+  }  
+
 
   render() {
+    const { language, words } = this.context
+    console.log(words)
+
     return (
-      <section>
-        <h2>{this.state.language.name}</h2>
-        <a href="/learn">Start practicing</a>
-        <h3>Words to practice</h3>
-        <ul>{this.state.words.map(word => {
-          return <li key={word.id}><h4>{word.original}</h4>  |
-          correct answer count: {word.correct_count} |
-          incorrect answer count: {word.incorrect_count}</li>
-        })}</ul>
-        <h4>Total correct answers: {this.state.language.total_score}</h4>
-      </section>
+      <div>
+        <section>
+          <h2>{language.name}</h2>
+          <Button onClick={(e) => { e.preventDefault(); this.props.history.push('/learn') }}>Start Practicing</Button>
+          {!words.length && <p>Loading...</p>}
+          <ul>
+            {words.map(word => {
+              return <li key={word.id}>
+                <span className="original">{word.original}</span>  =  {word.translation} | Correct Count :  {word.correct_count} | Incorrect Count :  {word.incorrect_count}
+              </li>
+            })}
+          </ul>
+          <h3>Total Score : {language.total_score}</h3>
+        </section>
+      </div>
     );
   }
+
 }
 
-export default DashboardRoute;
+
+
+
+export default DashboardRoute

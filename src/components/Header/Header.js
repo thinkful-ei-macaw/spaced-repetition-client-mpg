@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
 import './Header.css'
+import Button from '../../components/Button/Button';
 
 class Header extends Component {
   static contextType = UserContext
@@ -21,7 +22,7 @@ class Header extends Component {
           <Link
             onClick={this.handleLogoutClick}
             to='/login'>
-          <button type="submit" value={this.context.user.name}>Logout</button>
+          <Button type="submit" value={this.context.user.name}>Logout</Button>
           </Link>
         </nav>
       </div>

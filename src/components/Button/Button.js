@@ -8,4 +8,4 @@ const Button = React.forwardRef(({ className, ...props }, ref) => {
   )
 })
 
-export default Button
+export default Button;
