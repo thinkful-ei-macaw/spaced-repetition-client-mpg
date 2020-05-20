@@ -15,13 +15,13 @@ class Header extends Component {
     return (
       <div>
         <span>
-          Welcome, {this.context.user.name}!
+          {this.context.user.name}!
         </span>
         <nav>
           <Link
             onClick={this.handleLogoutClick}
             to='/login'>
-            Logout
+          <button type="submit" value={this.context.user.name}>Logout</button>
           </Link>
         </nav>
       </div>
@@ -43,7 +43,7 @@ class Header extends Component {
       <header>
         <h1>
           <Link to='/'>
-            Duolang
+            Spaced repetition
           </Link>
         </h1>
         {TokenService.hasAuthToken()

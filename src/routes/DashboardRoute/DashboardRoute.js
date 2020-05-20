@@ -21,21 +21,20 @@ class DashboardRoute extends Component {
   
 
   render() {
-   console.log(this.state.words);
     return (
       <section>
         <h2>{this.state.language.name}</h2>
-        <button onClick={(e) => {e.preventDefault(); this.props.history.push('/learn')}}>Start practicing!</button>
+        <a href="/learn">Start practicing</a>
         <h3>Words to practice</h3>
         <ul>{this.state.words.map(word => {
-          return <li key={word.id}>{word.original.toUpperCase()}  |
+          return <li key={word.id}><h4>{word.original}</h4>  |
           correct answer count: {word.correct_count} |
           incorrect answer count: {word.incorrect_count}</li>
         })}</ul>
-        <h4>Total score: {this.state.language.total_score}</h4>
+        <h4>Total correct answers: {this.state.language.total_score}</h4>
       </section>
     );
   }
 }
 
-export default DashboardRoute
+export default DashboardRoute;
