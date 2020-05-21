@@ -8,7 +8,7 @@ body::after {
   background-size: cover;
   content: "";
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,11 +39,12 @@ body {
 
 #root {
   display: flex;
-  margin: 1% 5%;
+  margin: 0 5%;
 }
 
 p {
   margin: 10px 0;
+  line-height: 40px;
 }
 
 input {
@@ -68,6 +69,7 @@ button:hover {
   background-color: black;
   color: white;
 }
+
 a {
   margin-right: 10px;
   color: yellow;
@@ -93,4 +95,15 @@ li {
   padding: 5px 10px;
   border-radius: 10px;
   margin-left: 5px;
+}
+.correct {
+  color: rgb(43, 247, 43);
+  font-weight: bold;
+}
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+.check {
+  margin: 8px 0 18px 0;
 }

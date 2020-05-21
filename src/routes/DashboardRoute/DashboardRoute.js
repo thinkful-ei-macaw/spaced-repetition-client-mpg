@@ -40,8 +40,8 @@ class DashboardRoute extends Component {
               return <li key={word.id}>
                 <span className="original">{word.original}</span> =   
                 <span className="translation"> 
-                {word.translation}</span> | Correct Count :  {word.correct_count} | 
-                   Incorrect Count :  {word.incorrect_count}
+                {word.translation}</span> <div className="check"> Correct:  <span className="correct">{word.correct_count}</span> | 
+                   Incorrect:  <span className="incorrect">{word.incorrect_count}</span></div>
               </li>
             })}
           </ul>
