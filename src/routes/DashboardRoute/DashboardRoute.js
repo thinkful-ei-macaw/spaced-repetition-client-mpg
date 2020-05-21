@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import LanguageApi from '../../services/language-api-service'
 import TokenService from '../../services/token-service';
 import LanguageContext from '../../contexts/LanguageContext';
-
-
-
+import Button from '../../components/Button/Button';
 
 
 class DashboardRoute extends Component {
@@ -26,40 +24,25 @@ class DashboardRoute extends Component {
       })
   }
 
-  //   correct_count: 15
-  // id: 10
-  // incorrect_count: 35
-  // language_id: 2
-  // memory_value: 1
-  // next: 9
-  // original: "bonjour"
-  // translation: "hello"
-  notDefined = (words) => {
-    if (words === undefined) {
-      return []
-    }
-  }
 
   render() {
-
-    // console.log(this.context.words)
     const { language, words } = this.context
     console.log(words)
 
 
     return (
-
-
       <div>
         <section>
           <h2>{language.name}</h2>
-          {/* <p>{words}</p> */}
-          <button onClick={(e) => { e.preventDefault(); this.props.history.push('/learn') }}>Start Practicing</button>
-          {!words.length && <p>LOADING</p>}
+          <Button onClick={(e) => { e.preventDefault(); this.props.history.push('/learn') }}>Start Practicing</Button>
+          {!words.length && <p>Loading...</p>}
           <ul>
             {words.map(word => {
               return <li key={word.id}>
-                {word.original.toUpperCase()}  =  {word.translation} | Correct Count :  {word.correct_count} | Incorrect Count :  {word.incorrect_count}
+                <span className="original">{word.original}</span> =
+                <span className="translation">
+                  {word.translation}</span> <div className="check"> Correct:  <span className="correct">{word.correct_count}</span> |
+                   Incorrect:  <span className="incorrect">{word.incorrect_count}</span></div>
               </li>
             })}
           </ul>
