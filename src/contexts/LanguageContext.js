@@ -18,6 +18,7 @@ export class LanguageProvider extends Component {
 
     state = {
         language: [],
+        words: [],
         error: null
     };
 

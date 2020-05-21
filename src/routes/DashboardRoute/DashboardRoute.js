@@ -34,7 +34,11 @@ class DashboardRoute extends Component {
   // next: 9
   // original: "bonjour"
   // translation: "hello"
-
+  notDefined = (words) => {
+    if (words === undefined) {
+      return []
+    }
+  }
 
   render() {
 
@@ -42,14 +46,16 @@ class DashboardRoute extends Component {
     const { language, words } = this.context
     console.log(words)
 
+
     return (
 
 
       <div>
         <section>
           <h2>{language.name}</h2>
-          <p>{words}</p>
+          {/* <p>{words}</p> */}
           <button onClick={(e) => { e.preventDefault(); this.props.history.push('/learn') }}>Start Practicing</button>
+          {!words.length && <p>LOADING</p>}
           <ul>
             {words.map(word => {
               return <li key={word.id}>

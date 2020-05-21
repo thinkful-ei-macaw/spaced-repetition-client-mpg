@@ -26,6 +26,7 @@ export class LearningProgress extends Component {
         wordIncorrectCount: 0,
         nextWord: null,
         guess: null,
+        prevWord: null,
         isCorrect: null,
         answer: null,
         error: null
@@ -71,6 +72,12 @@ export class LearningProgress extends Component {
         })
     }
 
+    setPrevWord = prevWord => {
+        this.setState({
+            prevWord
+        })
+    }
+
     setIsCorrect = isCorrect => {
         this.setState({
             isCorrect
@@ -98,6 +105,7 @@ export class LearningProgress extends Component {
             wordIncorrectCount: this.state.wordIncorrectCount,
             nextWord: this.state.nextWord,
             guess: this.state.guess,
+            prevWord: this.state.prevWord,
             isCorrect: this.state.isCorrect,
             answer: this.state.answer,
             error: this.state.error,
@@ -108,6 +116,7 @@ export class LearningProgress extends Component {
             setWordCorrectCount: this.setWordCorrectCount,
             setWordIncorrectCount: this.setWordIncorrectCount,
             setGuess: this.setGuess,
+            setPrevWord: this.setPrevWord,
             setAnswer: this.setAnswer,
             setIsCorrect: this.setIsCorrect,
             reset: this.reset
