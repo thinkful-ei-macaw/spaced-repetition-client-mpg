@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
-import LearningContext from '../../contexts/LearningContext';
-import Button from '../../components/Button/Button';
+import React, { Component } from "react";
+import LearningContext from "../../contexts/LearningContext";
+import Button from "../../components/Button/Button";
 
 export default class FeedBack extends Component {
   static contextType = LearningContext;
 
-  nextButton = React.createRef();
+  // nextButton = React.createRef();
 
-  goToNextWord = () => {
-    //this.context.setIsCorrect(null);
-  };
+  // goToNextWord = (e) => {
+  //   e.preventDefault();
+  //   //this.context.setIsCorrect(null);
+  //   this.props.history.push('/learn');
+  // };
 
-  componentDidMount() {
-    this.nextButton.current.focus();
-  }
+  // componentDidMount() {
+  //   this.nextButton.current.focus();
+  // }
 
   render() {
-
-    const { isCorrect, prevWord, answer, guess } = this.context;
-    console.log('answer', answer);
+    const { isCorrect, answer, nextWord, guess } = this.context;
+    console.log(this.context);
     return (
       <div>
         {isCorrect ? (
@@ -27,13 +28,13 @@ export default class FeedBack extends Component {
           <h2>You are terrible at this!</h2>
         )}
         <p>
-          The correct translation for <span>{prevWord}</span> was{" "}
-          <span>{answer}</span> <br />
-          Your answer was <span>{guess}</span>
-        </p>
-        <Button ref={this.nextButton} onClick={this.goToNextWord}>
-          Try another word
-        </Button>
+          The correct translation for <span className="makeBold">{nextWord}</span> was{" "}
+          <span className="makeBold">{answer}</span>
+          </p>
+          <p>Your answer was <span className="makeBold">{guess}</span></p>
+          <Button onClick={e => {e.preventDefault(); this.props.history.push('/learn')}}>
+            Try another word
+          </Button>
       </div>
     );
   }

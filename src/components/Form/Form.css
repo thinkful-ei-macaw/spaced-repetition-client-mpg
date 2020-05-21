@@ -22,6 +22,10 @@
   resize: vertical;
 }
 
+.Label {
+  font-size: 1.2em;
+}
+
 .Required {
   color: #CA1551;
   font-family: Arial;

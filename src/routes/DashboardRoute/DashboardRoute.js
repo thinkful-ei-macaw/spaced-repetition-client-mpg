@@ -38,7 +38,10 @@ class DashboardRoute extends Component {
           <ul>
             {words.map(word => {
               return <li key={word.id}>
-                <span className="original">{word.original}</span>  =  {word.translation} | Correct Count :  {word.correct_count} | Incorrect Count :  {word.incorrect_count}
+                <span className="original">{word.original}</span> =   
+                <span className="translation"> 
+                {word.translation}</span> | Correct Count :  {word.correct_count} | 
+                   Incorrect Count :  {word.incorrect_count}
               </li>
             })}
           </ul>
