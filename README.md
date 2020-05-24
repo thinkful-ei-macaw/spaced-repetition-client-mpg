@@ -14,19 +14,19 @@ Designed by [Glen](https://github.com/Nekotree) & [Muhiddin](https://github.com/
 
 # DESKTOP VIEW
 
-![Screenshot1](./src/screenshot1.png)
-![Screenshot2](./src/screenshot2.png)
-![Screenshot3](./src/screenshot3.png)
-![Screenshot4](./src/screenshot4.png)
+![Screenshot1](./screenshots/screenshot1.png)
+![Screenshot2](./screenshots/screenshot2.png)
+![Screenshot3](./screenshots/screenshot3.png)
+![Screenshot4](./screenshots/screenshot4.png)
 
 # MOBILE VIEW
 
-![Screenshot5](./src/screenshot6.png)
-![Screenshot6](./src/screenshot7.png)
-![Screenshot7](./src/screenshot5.png)
-![Screenshot8](./src/screenshot8.png)
-![Screenshot9](./src/screenshot9.png)
-![Screenshot10](./src/screenshot10.png)
+![Screenshot5](./screenshots/screenshot6.png)
+![Screenshot6](./screenshots/screenshot7.png)
+![Screenshot7](./screenshots/screenshot5.png)
+![Screenshot8](./screenshots/screenshot8.png)
+![Screenshot9](./screenshots/screenshot9.png)
+![Screenshot10](./screenshots/screenshot10.png)
 
 
 ### Stack
