@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(109, 106, 106);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+  font-size: 1.3em;
+}
+body::after {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+:root {
+  --font-size: calc(10px + 1vmin);
+}
+
+#root {
+  display: flex;
+  margin: 5% 5%;
+  padding: 20px;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 40px;
+}
+
+input {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+  border: none;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border: none;
+  transition: all 0.5s ease-in-out 0s;
+  
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+a {
+  margin-right: 10px;
+  color: yellow;
+  text-decoration: none;
+}
+ul{
+  margin-left: 20px;
+  padding: 0;
+}
+li {
+  list-style-type: decimal;
+  margin-top: 10px;
+}
+.original, .makeBold {
+  font-weight: bold;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+} 
+.original {
+  width: fit-content;
+  display: inline;
+}
+.translation {
+  font-weight: bold;
+  background-color: blue;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.correct {
+  color: rgb(43, 247, 43);
+  font-weight: bold;
+}
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+.check {
+  margin: 8px 0 18px 0;
+}
+
+button:focus {
+   background-color: black; color: white; 
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+a:focus {
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.logout:focus {
+  background: none;
+  padding: 0;
+}
+
+.learnLink {
+  background-color: brown;
+  color: yellow;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.learnLink:hover {
+  padding: 10px 10px;
+  background-color: green;
+}
+
+.langhead {
+  text-align: center;
+}
+
+.nextword {
+  font-size: 1.5em;
+  color: yellow;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.login-register {
+  float: right;
+}
+
+@media only screen and (min-width: 490px) {
+  .account-question {
+    display: inline;
+  }
+}
