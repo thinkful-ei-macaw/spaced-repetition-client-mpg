@@ -18,15 +18,18 @@ Designed by [Glen](https://github.com/Nekotree) & [Muhiddin](https://github.com/
 ![Screenshot2](./screenshots/screenshot2.png)
 ![Screenshot3](./screenshots/screenshot3.png)
 ![Screenshot4](./screenshots/screenshot4.png)
+![Screenshot5](./screenshots/screenshot5.png)
+![Screenshot6](./screenshots/screenshot6.png)
 
 # MOBILE VIEW
 
-![Screenshot5](./screenshots/screenshot6.png)
-![Screenshot6](./screenshots/screenshot7.png)
-![Screenshot7](./screenshots/screenshot5.png)
+
+![Screenshot7](./screenshots/screenshot7.png)
 ![Screenshot8](./screenshots/screenshot8.png)
 ![Screenshot9](./screenshots/screenshot9.png)
 ![Screenshot10](./screenshots/screenshot10.png)
+![Screenshot11](./screenshots/screenshot11.png)
+![Screenshot12](./screenshots/screenshot12.png)
 
 
 ### Stack
