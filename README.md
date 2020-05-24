@@ -8,20 +8,26 @@ This is an amazing user- and mobile-friendly app for new language learners. It i
 
 [Live](https://duolang.org/)
 
+Designed by [Glen](https://github.com/Nekotree) & [Muhiddin](https://github.com/muhiddinsgithub) & [Patrick](https://github.com/7eyedhero)
+
 # Screenshots
 
-![Screenshot1](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot1.png)
-![Screenshot2](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot2.png)
-![Screenshot3](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot3.png)
-![Screenshot4](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot4.png)
-![Screenshot5](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot5.png)
-![Screenshot6](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot6.png)
-![Screenshot7](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot7.png)
-![Screenshot8](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot8.png)
-![Screenshot9](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot9.png)
-![Screenshot10](https://github.com/thinkful-ei-macaw/spaced-repetition-client-mpg/blob/master/screenshot10.png)
+# DESKTOP VIEW
 
-Designed by Glen & [Muhiddin](https://github.com/muhiddinsgithub) & Patrick
+![Screenshot1](./src/screenshot1.png)
+![Screenshot2](./src/screenshot2.png)
+![Screenshot3](./src/screenshot3.png)
+![Screenshot4](./src/screenshot4.png)
+
+# MOBILE VIEW
+
+![Screenshot5](./src/screenshot6.png)
+![Screenshot6](./src/screenshot7.png)
+![Screenshot7](./src/screenshot5.png)
+![Screenshot8](./src/screenshot8.png)
+![Screenshot9](./src/screenshot9.png)
+![Screenshot10](./src/screenshot10.png)
+
 
 ### Stack
 
@@ -38,7 +44,7 @@ PostgreSQL
 Cypress, Mocha
 
 #### Hosting
-Client: now(zeit/vercel), godaddy.com(domain)
+Client: now(zeit/vercel), godaddy.com(domain)  
 Server/Database: heroku
 
 
