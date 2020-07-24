@@ -22,12 +22,13 @@ class DashboardRoute extends Component {
         }
         this.context.setError(err)
       })
-  }  
+  }
 
 
   render() {
     const { language, words } = this.context
     console.log(words)
+
 
     return (
       <div>
@@ -38,9 +39,9 @@ class DashboardRoute extends Component {
           <ul>
             {words.map(word => {
               return <li key={word.id}>
-                <span className="original">{word.original}</span> =   
-                <span className="translation"> 
-                {word.translation}</span> <div className="check"> Correct:  <span className="correct">{word.correct_count}</span> | 
+                <span className="original">{word.original}</span> =
+                <span className="translation">
+                  {word.translation}</span> <div className="check"> Correct:  <span className="correct">{word.correct_count}</span> |
                    Incorrect:  <span className="incorrect">{word.incorrect_count}</span></div>
               </li>
             })}

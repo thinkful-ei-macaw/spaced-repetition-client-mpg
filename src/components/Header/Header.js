@@ -22,7 +22,7 @@ class Header extends Component {
           <Link
             onClick={this.handleLogoutClick}
             to='/login'>
-          <Button type="submit" value={this.context.user.name}>Logout</Button>
+            <Button type="submit" value={this.context.user.name}>Logout</Button>
           </Link>
         </nav>
       </div>

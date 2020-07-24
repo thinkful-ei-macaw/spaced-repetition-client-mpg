@@ -21,14 +21,14 @@ class LearningRoute extends Component {
   handleSubmit = event => {
     event.preventDefault();
     LanguageApi.postGuess(event.target.guess.value)
-    .then(res => {
-      console.log(res);
-      this.context.setAnswer(res.answer);
-      this.context.setTotalScore(res.totalScore);
-      this.context.setIsCorrect(res.isCorrect);
-      this.context.setGuess(res.guess);
-      this.props.history.push('/feedback');
-    })
+      .then(res => {
+        console.log(res);
+        this.context.setAnswer(res.answer);
+        this.context.setTotalScore(res.totalScore);
+        this.context.setIsCorrect(res.isCorrect);
+        this.context.setGuess(res.guess);
+        this.props.history.push('/feedback');
+      })
 
   }
 
@@ -46,7 +46,7 @@ class LearningRoute extends Component {
           <h2>{nextWord}</h2>
           <p>Your total score: {totalScore}</p>
           <label>Enter your guess: </label>
-          <Input type="text" name="guess" id="guess" required/>
+          <Input type="text" name="guess" id="guess" required />
           <Button type="submit">Submit your answer</Button>
           <p>You have answered this word correctly {wordCorrectCount} times.</p>
           <p>
