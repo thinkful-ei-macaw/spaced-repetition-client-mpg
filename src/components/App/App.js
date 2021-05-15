@@ -24,6 +24,9 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header />
+        <div>
+          Using spaced-repetition technique
+        </div>
         <main>
           {hasError && (
             <p>There was an error! Oh no!</p>

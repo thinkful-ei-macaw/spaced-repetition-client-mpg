@@ -1,19 +1,14 @@
 .Button {
   color: white;
-  background: none;
-  font-size: 1.1em;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  border: 2px solid white;
+  background: rgb(189,30,81);
+  font-size: 0.9em;
+  padding: 10px 36px;
   cursor: pointer;
-  outline: none;
   margin-top: 10px;
+  border-radius: 30px 3px 30px 30px;
 }
 .Button:hover{
   color: white;
-  background-color: black;
-  border: 2px solid black;
-  transition: all 0.5s ease-in-out 0s;
+  background-color: rgb(216, 49, 102);
+  transition: all 0.3s ease-in-out 0s;
 }

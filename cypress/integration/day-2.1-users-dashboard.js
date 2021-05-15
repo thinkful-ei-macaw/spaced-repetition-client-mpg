@@ -42,7 +42,7 @@ describe(`User story: User's dashboard`, function() {
 
         cy.get('a')
           .should('have.attr', 'href', '/learn')
-          .and('have.text', 'Start practicing')
+          .and('have.text', 'Start practicing!')
 
         cy.get('h3')
           .should('have.text', 'Words to practice')
@@ -56,19 +56,16 @@ describe(`User story: User's dashboard`, function() {
 
       words.forEach((word, idx) => {
         cy.get('main section li').eq(idx).within($li => {
-
-          cy.get('h4').should('have.text', word.original)
-
           cy.root()
             .should(
               'contain',
-              `correct answer count: ${word.correct_count}`
+              `${word.correct_count}`
             )
 
           cy.root()
             .should(
               'contain',
-              `incorrect answer count: ${word.incorrect_count}`
+              `${word.incorrect_count}`
             )
         })
       })

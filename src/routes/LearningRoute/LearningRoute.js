@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LanguageApi from "../../services/language-api-service";
 import LearningContext from "../../contexts/LearningContext";
 import Button from "../../components/Button/Button";
-import { Input } from "../../components/Form/Form";
+import { Input, Label } from "../../components/Form/Form";
 
 class LearningRoute extends Component {
   static contextType = LearningContext;
@@ -44,15 +44,16 @@ class LearningRoute extends Component {
         <form className="postGuess" onSubmit={this.handleSubmit}>
           <h2>Translate the word:</h2>
           <span className="nextword">{nextWord}</span>
-          <p>Your total score is: {totalScore}</p>
-          <label htmlFor="learn-guess-input">What's the translation for this word?</label>
+          <br/><br/>
+          <Label htmlFor="learn-guess-input">What's the translation for this word?</Label>
           <Input type="text" name="guess" id="learn-guess-input" required/>
           <Button type="submit">Submit your answer</Button>
-          <p>You have answered this word correctly {wordCorrectCount} times.</p>
-          <p>
-            You have answered this word incorrectly {wordIncorrectCount} times.
-          </p>
         </form>
+        <p>Your total score is: {totalScore}</p>
+        <p>You have answered this word <span className="correct">correctly  {wordCorrectCount}</span>  time(s).</p>
+          <p>
+            You have answered this word <span className="incorrect">incorrectly  {wordIncorrectCount}</span> time(s).
+          </p>
       </section>
     );
   }

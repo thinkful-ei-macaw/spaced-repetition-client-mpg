@@ -44,7 +44,7 @@ class LoginForm extends Component {
     const { error } = this.state;
     return (
       <form aria-label='log in form' className='LoginForm' onSubmit={this.handleSubmit}>
-        <div role='alert'>{error && <p>{error}</p>}</div>
+        <div role='alert' className='errMsg'>{error && <p>{error}</p>}</div>
         <div>
           <Label htmlFor='login-username-input'>Username</Label>
           <Input ref={this.firstInput} id='login-username-input' name='username' required />

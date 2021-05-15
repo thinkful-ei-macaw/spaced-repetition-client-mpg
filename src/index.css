@@ -1,84 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-* {
+*{
   box-sizing: border-box;
 }
-
 body {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  background-color: rgb(73,12,61);
+  margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(17, 8, 8);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  color: white;
-  font-size: 1.3em;
 }
-body::after {
-  background-image: url(bg.jpg);
-  background-size: cover;
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  opacity: 0.4;
-}
-:root {
-  --font-size: calc(10px + 1vmin);
-}
-
 #root {
   display: flex;
-  margin: 5% 5%;
-  padding: 20px;
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  background-color: rgb(73,12,61);
+  color: white;
 }
 
+.App {
+  background-color: rgb(54, 12, 46);
+  padding: 20px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  margin: 5px 0px;
+}
+nav {
+  margin-left: 10px;
+  display: flex;
+  justify-content: right;
+}
+.logout {
+  margin-right: 0px !important;
+}
+.logout button {
+  margin-right: 0px !important;
+}
+nav.login-register {
+  padding-left: 10px;
+}
 p {
   margin: 10px 0;
-  line-height: 40px;
 }
 
 input {
   margin: 10px 0;
   width: 100%;
   padding: 10px 5px;
-  outline: none;
   border: none;
-  font-size: 1em;
 }
-
 button {
   padding: 10px 10px;
   cursor: pointer;
   margin-right: 20px;
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: 14px;
   border: none;
   transition: all 0.5s ease-in-out 0s;
   
 }
-button:hover {
-  background-color: black;
-  color: white;
-}
 
 a {
   margin-right: 10px;
-  color: yellow;
+  color: rgb(34, 231, 172);
   text-decoration: none;
+  transition: all ease-in-out 0.5s;
+}
+a:hover {
+  color: rgb(255, 38, 0);
 }
 ul{
   margin-left: 20px;
@@ -88,88 +85,69 @@ li {
   list-style-type: decimal;
   margin-top: 10px;
 }
-.original, .makeBold {
-  font-weight: bold;
-  background-color: black;
-  padding: 5px 10px;
+
+.wordStat{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
   border-radius: 10px;
-} 
-.original {
-  width: fit-content;
-  display: inline;
+  background-color: rgb(27, 25, 25);
 }
+
 .translation {
-  font-weight: bold;
-  background-color: blue;
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin-left: 5px;
+  color: green;
 }
 .correct {
-  color: rgb(43, 247, 43);
-  font-weight: bold;
+  color: rgb(38, 223, 31);
 }
 .incorrect {
-  color: red;
-  font-weight: bold;
-}
-.check {
-  margin: 8px 0 18px 0;
+  color: rgb(189,30,81);
 }
 
-button:focus {
-   background-color: black; color: white; 
+.fa-check-circle {
+  color: green;
 }
-
-input:focus {
-  background-color: lightblue;
-}
-
-a:focus {
-  background-color: black;
-  padding: 5px 10px;
-  border-radius: 10px;
-  outline: none;
-}
-
-.logout:focus {
-  background: none;
-  padding: 0;
-}
-
 .learnLink {
-  background-color: brown;
-  color: yellow;
-  padding: 5px 10px;
-  border-radius: 10px;
-  outline: none;
+  background-color: rgb(29, 26, 26);
+  padding: 8px 12px;
+  font-size: 1.2em;
 }
-
-.learnLink:hover {
-  padding: 10px 10px;
-  background-color: green;
+.learnLink:hover{
+  background-color: rgb(15, 14, 14);
 }
 
 .langhead {
+  margin-top: 20px;
+  padding: 10px;
   text-align: center;
 }
 
 .nextword {
   font-size: 1.5em;
-  color: yellow;
+  color: rgb(241,184,20);
   font-weight: bold;
-  font-style: italic;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-decoration: underline;
+  background-color: black;
+  padding: 5px 10px;
 }
-
+#learn-guess-input {
+  margin-top: 10px;
+}
 .login-register {
   float: right;
 }
+.errMsg {
+  color: rgb(245, 29, 29);
+  font-size: 0.9em;
+}
 
+.logo {
+  color: rgb(241,184,20);
+}
 @media only screen and (min-width: 490px) {
   .account-question {
     display: inline;
   }
 }
+

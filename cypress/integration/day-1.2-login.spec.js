@@ -45,7 +45,7 @@ describe(`User story: Login`, function() {
     cy.visit('/login')
       .get('a[href="/register"]')
       .should('be.visible')
-      .and('have.text', 'Sign up')
+      .and('have.text', 'Register')
   })
 
   it('displays the login page', () => {
@@ -85,7 +85,7 @@ describe(`User story: Login`, function() {
       cy.server()
         .route({
           method: 'POST',
-          url: '/api/auth/token',
+          url: '/api/auth/login',
           // server determines credentials are incorrect
           status: 400,
           response: {
@@ -95,7 +95,7 @@ describe(`User story: Login`, function() {
         .as('loginRequest')
     })
 
-    it(`displays error from POSTS /api/auth/token`, () => {
+    it(`displays error from POSTS /api/auth/login`, () => {
       const newUser = {
         username: 'invalid-username',
         password: 'invalid-password',
@@ -127,8 +127,8 @@ describe(`User story: Login`, function() {
       cy.server()
         .route({
           method: 'POST',
-          url: '/api/auth/token',
-          // server determins credentials are correct
+          url: '/api/auth/login',
+          // server determines credentials are correct
           status: 200,
           response: {
             authToken: loginToken
@@ -139,7 +139,7 @@ describe(`User story: Login`, function() {
       cy.route({
           method: 'PUT',
           // server determins refresh is correct
-          url: '/api/auth/token',
+          url: '/api/auth/login',
           status: 200,
           response: {
             authToken: loginToken

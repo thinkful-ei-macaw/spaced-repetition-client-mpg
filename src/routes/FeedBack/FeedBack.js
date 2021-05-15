@@ -12,9 +12,9 @@ export default class FeedBack extends Component {
       <div>
         <main>
         {isCorrect ? (
-          <h2 className="correct">You were correct! :D<i class="far fa-smile"></i></h2>
+          <h2 className="correct">You were correct! <i className="far fa-smile"></i></h2>
         ) : (
-          <h2 className="incorrect">Good try, but not quite right :(<i class="far fa-frown"></i></h2>
+          <h2 className="incorrect">Good try, but not quite right <i className="far fa-frown"></i></h2>
         )}
           <div className='DisplayScore'><p>Your total score is: {totalScore}</p></div>
           <div className="DisplayFeedback"><p>The correct translation for <span className="makeBold">{nextWord}</span> was{" "}
