@@ -1,6 +1,7 @@
-export default {
+const config =  {
   API_ENDPOINT: 'https://duolang.herokuapp.com/api',
-  TOKEN_KEY: process.env.TOKEN_KEY || "duolang-client-auth-token"
+  TOKEN_KEY: '75c4cda6-8b20-4547-8ed7-cf87ae2adc4e',
 }
 
-// 'http://localhost:8000/api'
+export default config;
+//  'http://localhost:8000/api',

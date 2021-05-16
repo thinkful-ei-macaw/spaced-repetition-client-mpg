@@ -49,7 +49,7 @@ class DashboardRoute extends Component {
               </li>
             })}
           </ul>
-          <h4><i class="fas fa-check-circle"></i> Total correct answers: {language.total_score}</h4>
+          <h4><i className="fas fa-check-circle"></i> Total correct answers: {language.total_score}</h4>
         </section>
       </div>
     );

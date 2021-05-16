@@ -7,6 +7,7 @@ const _TEN_SECONDS_IN_MS = 10000
 const TokenService = {
   saveAuthToken(token) {
     window.localStorage.setItem(config.TOKEN_KEY, token)
+    console.log(config.API_ENDPOINT, config.TOKEN_KEY)
   },
   getAuthToken() {
     return window.localStorage.getItem(config.TOKEN_KEY)

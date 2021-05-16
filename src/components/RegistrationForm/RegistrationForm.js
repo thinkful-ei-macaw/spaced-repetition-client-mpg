@@ -59,12 +59,12 @@ class RegistrationForm extends Component {
           </Label>
           <Input id='registration-password-input' name='password' type='password' required />
         </div>
-        <footer>
+        <div>
           <Button type='submit'>Register</Button>
           <div className='account-question'>
             <Link to='/login'>Already have an account?</Link>
           </div>
-        </footer>
+        </div>
       </form>
     );
   }
