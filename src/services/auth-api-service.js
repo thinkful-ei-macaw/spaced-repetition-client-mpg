@@ -3,11 +3,11 @@ import TokenService from './token-service'
 
 const AuthApiService = {
   postUser(user) {
-    console.log(config.API_ENDPOINT)
     return fetch(`${config.API_ENDPOINT}/users`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
+        'Authorization': `Bearer ${config.TOKEN_KEY}`
       },
       body: JSON.stringify(user),
     })
